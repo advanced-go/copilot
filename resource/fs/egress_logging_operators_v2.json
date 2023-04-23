@@ -1,0 +1,136 @@
+[
+  {
+    "Value": "%START_TIME%"
+  },
+  {
+    "Value": "%DURATION%"
+  },
+  {
+    "Value": "%TRAFFIC%"
+  },
+  {
+    "Value": "%ROUTE_NAME%"
+  },
+  {
+    "Value": "%STATUS_CODE%"
+  },
+  {
+    "Value": "%METHOD%"
+  },
+  {
+    "Value": "%HOST%"
+  },
+  {
+    "Value": "%PATH%"
+  },
+  {
+    "Value": "%TIMEOUT_DURATION%"
+  },
+  {
+    "Value": "%RATE_LIMIT%"
+  },
+  {
+    "Value": "%RATE_BURST%"
+  },
+  {
+    "Value": "%RETRY%"
+  },
+  {
+    "Value": "%RETRY_DELAY%"
+  },
+  {
+    "Value": "%RETRY_ON%"
+  },
+  {
+    "Value": "%RETRY_TIMEOUT%"
+  },
+  {
+    "Value": "%RETRY_COUNT%"
+  },
+  {
+    "Value": "%RETRY_STATUS_CODES%"
+  },
+  {
+    "Value": "%RETRY_METHODS%"
+  },
+  {
+    "Value": "%RETRY_HOSTS%"
+  },
+  {
+    "Value": "%RETRY_PATHS%"
+  },
+  {
+    "Value": "%RETRY_HEADERS%"
+  },
+  {
+    "Value": "%RETRY_BODY%"
+  },
+  {
+    "Value": "%RETRY_BODY_REGEX%"
+  },
+  {
+    "Value": "%RETRY_BODY_REGEX_FLAGS%"
+  },
+  {
+    "Value": "%RETRY_BODY_REGEX_MATCH%"
+  },
+  {
+    "Value": "%RETRY_BODY_REGEX_NOT_MATCH%"
+  },
+  {
+    "Value": "%RETRY_BODY_REGEX_MATCH_COUNT%"
+  },
+  {
+    "Value": "%RETRY_BODY_REGEX_NOT_MATCH_COUNT%"
+  },
+  {
+    "Value": "%RETRY_BODY_REGEX_MATCH_COUNT_MIN%"
+  },
+  {
+    "Value": "%RETRY_BODY_REGEX_MATCH_COUNT_MAX%"
+  },
+  {
+    "Value": "%RETRY_BODY_REGEX_NOT_MATCH_COUNT_MIN%"
+  },
+  {
+    "Value": "%RETRY_BODY_REGEX_NOT_MATCH_COUNT_MAX%"
+  },
+  {
+    "Value": "%RETRY_BODY_REGEX_MATCH_COUNT_RANGE%"
+  },
+  {
+    "Value": "%RETRY_BODY_REGEX_NOT_MATCH_COUNT_RANGE%"
+  },
+  {
+    "Value": "%RETRY_BODY_REGEX_MATCH_COUNT_RANGE_MIN%"
+  },
+  {
+    "Value": "%RETRY_BODY_REGEX_MATCH_COUNT_RANGE_MAX%"
+  },
+  {
+    "Value": "%RETRY_BODY_REGEX_NOT_MATCH_COUNT_RANGE_MIN%"
+  },
+  {
+    "Value": "%RETRY_BODY_REGEX_NOT_MATCH_COUNT_RANGE_MAX%"
+  },
+  {
+    "Value": "%RETRY_BODY_REGEX_MATCH_COUNT_RANGE_MIN_MAX%"
+  },
+  {
+    "Value": "%RETRY_BODY_REGEX_NOT_MATCH_COUNT_RANGE_MIN_MAX%"
+  },
+  {
+    "Value": "%RETRY_BODY_REGEX_MATCH_COUNT_RANGE_MIN_MAX%"
+  },
+  {
+    "Value": "%RETRY_BODY_REGEX_NOT_MATCH_COUNT_RANGE_MIN_MAX%"
+  },
+  {
+    "Value": "%RETRY_BODY_REGEX_MATCH_COUNT_RANGE_MIN
+  {
+    "Value": "%PROXY%"
+  },
+  {
+    "Value": "%STATUS_FLAGS%"
+  }
+]

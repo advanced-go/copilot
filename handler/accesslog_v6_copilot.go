@@ -8,9 +8,7 @@ import (
 	"net/http"
 )
 
-var location = "/handler/access-log"
-
-func AccessLogHandler(w http.ResponseWriter, r *http.Request) {
+func AccessLogHandler_4(w http.ResponseWriter, r *http.Request) {
 	var status = runtime.NewStatusOK()
 
 	switch r.Method {
@@ -31,9 +29,26 @@ func AccessLogHandler(w http.ResponseWriter, r *http.Request) {
 	case http.MethodDelete:
 		accesslog.Delete()
 	case http.MethodPut:
+		var entry accesslog.Entry
+
+		// Refactoring unmarshalling
+		entry, status := unmarshal(r)
 
 	default:
 	}
 	exchange.WriteResponse(w, nil, status)
 }
 
+//github:copilot
+func unmarshal(r *http.Request) (accesslog.Entry, runtime.Status) {
+	var entry accesslog.Entry
+	buf, err := exchange.ReadAll(r.Body)
+	if err != nil {
+		return entry, runtime.NewStatus(http.StatusInternalServerError, location, err)
+	}
+	err = json.Unmarshal(buf, &entry)
+	if err != nil {
+		return entry, runtime.NewStatus(http.StatusInternalServerError, location, err)
+	}
+	return entry, runtime.NewStatusOK()
+}

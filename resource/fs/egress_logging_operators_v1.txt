@@ -1,0 +1,8 @@
+Delete :
+
+ {
+    "Value": "%RETRY_RATE_LIMIT%"
+  },
+  {
+    "Value": "%RETRY_RATE_BURST%"
+  },
