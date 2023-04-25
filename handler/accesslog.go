@@ -31,9 +31,8 @@ func AccessLogHandler(w http.ResponseWriter, r *http.Request) {
 	case http.MethodDelete:
 		accesslog.Delete()
 	case http.MethodPut:
-
+		// The exercise is to finish the code for the PUT method
 	default:
 	}
 	exchange.WriteResponse(w, nil, status)
 }
-

@@ -54,6 +54,8 @@ func init() {
 	exchange.HandleFunc("/access-log", AccessLogHandler)
 } // Path: pkg\handler\accesslog_test.go	// Path: pkg\handler\accesslog.go	// Path: pkg\accesslog\access_test.go	// Path: pkg\host\startup.go
 
+//github:copilot func init() {
+
 //github:copilot
 func unmarshalEntry(buf []byte) (accesslog.Entry, error) {
 	var entry accesslog.Entry
