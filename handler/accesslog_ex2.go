@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-func AccessLogHandler_3(w http.ResponseWriter, r *http.Request) {
+func AccessLogHandler_2(w http.ResponseWriter, r *http.Request) {
 	var status = runtime.NewStatusOK()
 
 	switch r.Method {
@@ -49,5 +49,6 @@ func AccessLogHandler_3(w http.ResponseWriter, r *http.Request) {
 	exchange.WriteResponse(w, nil, status)
 }
 
-// Create a new function
-func unmarshal
+// Refactoring case http.MethodPut from above
+func
+

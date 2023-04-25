@@ -31,27 +31,10 @@ func AccessLogHandler_4(w http.ResponseWriter, r *http.Request) {
 	case http.MethodPut:
 		var entry accesslog.Entry
 
-		// Start unmarshalling
-		buf, err := exchange.ReadAll(r.Body)
-		//github:copilot
-		if err != nil {
-			status = runtime.NewStatus(http.StatusInternalServerError, location, err)
-		} else {
-			err = json.Unmarshal(buf, &entry)
-			if err != nil {
-				status = runtime.NewStatus(http.StatusInternalServerError, location, err)
-			} else {
-				accesslog.Put(entry)
-			}
-		}
+		// Refactoring unmarshalling
+		entry, status := unmarshal(r)
+
 	default:
 	}
 	exchange.WriteResponse(w, nil, status)
-}
-
-//github:copilot
-func unmarshalEntry(buf []byte) (accesslog.Entry, error) {
-	var entry accesslog.Entry
-	err := json.Unmarshal(buf, &entry)
-	return entry, err
 }
