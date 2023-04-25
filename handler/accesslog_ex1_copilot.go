@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-func AccessLogHandler_2(w http.ResponseWriter, r *http.Request) {
+func AccessLogHandler_1_Copilot(w http.ResponseWriter, r *http.Request) {
 	var status = runtime.NewStatusOK()
 
 	switch r.Method {

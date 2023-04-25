@@ -49,6 +49,6 @@ func AccessLogHandler_2(w http.ResponseWriter, r *http.Request) {
 	exchange.WriteResponse(w, nil, status)
 }
 
-// Refactoring case http.MethodPut from above
+// Start a function for refactoring case http.MethodPut from above
 func
 

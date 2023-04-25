@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-func AccessLogHandler_2(w http.ResponseWriter, r *http.Request) {
+func AccessLogHandler_2_Copilot(w http.ResponseWriter, r *http.Request) {
 	var status = runtime.NewStatusOK()
 
 	switch r.Method {
@@ -97,4 +97,3 @@ func AccessLogHandler_4(w http.ResponseWriter, r *http.Request) {
 	}
 	exchange.WriteResponse(w, nil, status)
 }
-

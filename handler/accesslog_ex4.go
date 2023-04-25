@@ -31,7 +31,7 @@ func AccessLogHandler_4(w http.ResponseWriter, r *http.Request) {
 	case http.MethodPut:
 		var entry accesslog.Entry
 
-		// Refactoring unmarshalling
+		// Create a call to an unmarshal function.
 		entry, status := unmarshal(r)
 
 	default:
