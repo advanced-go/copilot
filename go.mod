@@ -4,6 +4,7 @@ go 1.18
 
 require (
 	github.com/go-http-utils/headers v0.0.0-20181008091004-fed159eddc2a // indirect
+	github.com/go-sre/ai v0.0.0-20230426153046-0afca6ae0b48 // indirect
 	github.com/go-sre/core v0.0.0-20230414125950-256e7ff082d1 // indirect
 	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/google/uuid v1.3.0 // indirect
