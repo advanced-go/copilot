@@ -1,0 +1,16 @@
+
+Thinking about AI and how to create an intelligent agent.
+
+Agent Terminology
+Performance Measure of Agent − It is the criteria, which determines how successful an agent is.
+
+Behavior of Agent − It is the action that agent performs after any given sequence of percepts.
+
+Percept − It is agent’s perceptual inputs at a given instance.
+
+Percept Sequence − It is the history of all that an agent has perceived till date.
+
+Agent Function − It is a map from the precept sequence to an action.
+
+
+Agent percepts the environment through sensors and acts on it through actuators. The agent function maps the percept sequence to the action. The agent program runs on the physical architecture to produce the agent function.
