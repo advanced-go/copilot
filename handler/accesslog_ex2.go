@@ -23,7 +23,10 @@ func AccessLogHandler_2(w http.ResponseWriter, r *http.Request) {
 					status = runtime.NewStatus(http.StatusInternalServerError, location, err)
 				} else {
 					exchange.WriteResponse(w, buf, status)
+					return
 				}
+			} else {
+				status = runtime.NewStatus(http.StatusNotFound, location, nil)
 			}
 		}
 	case http.MethodDelete:
