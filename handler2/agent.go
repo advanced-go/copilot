@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"github.com/go-sre/ai/percept"
+	"github.com/go-sre/ai-public/percept"
 	"github.com/go-sre/core/exchange"
 	"github.com/go-sre/core/runtime"
 	"net/http"
