@@ -2,9 +2,10 @@ package handler
 
 import (
 	"encoding/json"
-	"github.com/go-sre/copilot/accesslog"
-	"github.com/go-sre/core/exchange"
-	"github.com/go-sre/core/runtime"
+	"github.com/advanced-go/copilot/accesslog"
+	"github.com/advanced-go/core/http2"
+	"github.com/advanced-go/core/io2"
+	"github.com/advanced-go/core/runtime"
 	"net/http"
 )
 
@@ -20,13 +21,13 @@ func AccessLogHandler_2(w http.ResponseWriter, r *http.Request) {
 			if len(entries) > 0 {
 				buf, err := json.Marshal(entries)
 				if err != nil {
-					status = runtime.NewStatus(http.StatusInternalServerError, location, err)
+					status = runtime.NewStatusError(http.StatusInternalServerError, location, err)
 				} else {
-					exchange.WriteResponse(w, buf, status)
+					http2.WriteResponse(w, buf, status,nil)
 					return
 				}
 			} else {
-				status = runtime.NewStatus(http.StatusNotFound, location, nil)
+				status = runtime.NewStatusError(http.StatusNotFound, location, nil)
 			}
 		}
 	case http.MethodDelete:
@@ -35,21 +36,21 @@ func AccessLogHandler_2(w http.ResponseWriter, r *http.Request) {
 		var entry accesslog.Entry
 
 		// Start unmarshalling
-		buf, err := exchange.ReadAll(r.Body)
+		buf, err := io2.ReadAll(r.Body)
 		//github:copilot
 		if err != nil {
-			status = runtime.NewStatus(http.StatusInternalServerError, location, err)
+			status = runtime.NewStatusError(http.StatusInternalServerError, location, err)
 		} else {
 			err = json.Unmarshal(buf, &entry)
 			if err != nil {
-				status = runtime.NewStatus(http.StatusInternalServerError, location, err)
+				status = runtime.NewStatusError(http.StatusInternalServerError, location, err)
 			} else {
 				accesslog.Put(entry)
 			}
 		}
 	default:
 	}
-	exchange.WriteResponse(w, nil, status)
+	http2.WriteResponse(w, nil, status,nil)
 }
 
 // Start a function for refactoring case http.MethodPut from above
